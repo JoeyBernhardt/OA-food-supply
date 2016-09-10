@@ -1,0 +1,52 @@
+Data_entry_person,Observation_ID,Paper_no,Author,Year,Taxon,Taxon.big,"CO2 treatment (control, uatm)","CO2 treatment (elevated, uatm)",DeltaCO2,DeltapH,Unit,Food.supply,Food.relative,Food.relative score,Mean_Ambient,SE_Ambient,SD_Ambient,95CI_Ambient,N_Ambient,Mean_Elevated,SE_Elevated,SD_Elevated,95CI_Elevated,N_Elevated,Notes,,,,,
+Norah,1,1,Cole,2016,oyster,bivalve,388.42,1158.07,769.65,0.41,shell length (um),Low,half food,1,274.9513,2.0468,1.1817,,3,274.9513,2.7290,1.5756,,3,,,,,,
+Norah,2,1,Cole,2016,oyster,bivalve,388.42,1158.07,769.65,0.41,shell length (um),High,full food,3,292.6901,5.4581,3.1512,,3,274.9513,4.7758,2.7573,,3,,,,,,
+Joey,3,2,Pan,2015,urchin,echinoderm,431.9,800.6,368.7,0.2,body length (um),Low,starvation,0,240.41,11.58,81.91,,50,237.297,11.58,81.907714,,50,"JB estimate the SEM from the width of the dots on the graph, since they were not visible, 'error bars fall within the graphical representation of the data point'",,,,,
+Joey,4,2,Pan,2015,urchin,echinoderm,431.9,800.6,368.7,0.2,body length (um),High,ad libitum,4,336.98166,11.58,81.91,,50,339.27267,11.58,81.907714,,50,"JB estimate the SEM from the width of the dots on the graph, since they were not visible, 'error bars fall within the graphical representation of the data point'",,,,,
+Joey,5,3,Hettinger,2013,oyster,bivalve,494,1065,571,0.3,total dry weight (ug/larva),High,natural,3,4.210178034,0.08467,0.19,,5,3.8993252,0.0605,0.1352821126,,5,,,,,,
+Joey,6,3,Hettinger,2013,oyster,bivalve,528,1067,539,0.3,total dry weight (ug/larva),Med,one half,2,4.2352,0.096,0.21,,5,4.0091,0.024129,0.05395408423,,5,,,,,,
+Joey,7,3,Hettinger,2013,oyster,bivalve,539,1094,555,0.3,total dry weight (ug/larva),Low,one tenth,1,3.12294935,0.084724,0.19,,5,2.921063328,0.290366602,0.6492794605,,5,,,,,,
+Joey,8,4,Thomsen,2013,Mussel,bivalve,380,1120,740,0.31,organic mass (mg),Low,one tenth,1,0.062676,0.0000377964473,0.0001,,7,0.1057492931,0.0000377964473,0.0001,,7,,,,,,
+Joey,9,4,Thomsen,2013,Mussel,bivalve,380,1120,740,0.31,organic mass (mg),Med,one half,2,0.327426,0.08061989769,0.2133002,,7,0.4772855796,0.05136896254,0.1359095,,7,,,,,,
+Joey,10,4,Thomsen,2013,Mussel,bivalve,380,1120,740,0.31,organic mass (mg),High,full food,3,0.708953817,0.1027379251,0.271819,,7,0.557775,0.1100763611,0.2912346767,,7,,,,,,
+Joey,11,4,Thomsen,2013,Mussel,bivalve,380,2400,2020,0.61,organic mass (mg),Low,one tenth,1,0.062676,0.0000377964473,0.0001,,7,0.0903864279,0.0000377964473,0.0001,,7,,,,,,
+Joey,12,4,Thomsen,2013,Mussel,bivalve,380,2400,2020,0.61,organic mass (mg),Med,one half,2,0.327426,0.08061989769,0.2133002,,7,0.34561734,0.04036133345,0.1067860509,,7,,,,,,
+Joey,13,4,Thomsen,2013,Mussel,bivalve,380,2400,2020,0.61,organic mass (mg),High,full food,3,0.708953817,0.1027379251,0.271819,,7,0.6396795476,0.1320916367,0.349481621,,7,,,,,,
+Joey,14,4,Thomsen,2013,Mussel,bivalve,380,4000,3620,0.82,organic mass (mg),Low,one tenth,1,0.062676,0.0000377964473,0.0001,,7,0.0946277097,0.0000377964473,0.0001,,7,,,,,,
+Joey,15,4,Thomsen,2013,Mussel,bivalve,380,4000,3620,0.82,organic mass (mg),Med,one half,2,0.327426,0.08061989769,0.2133002,,7,0.2235626767,0.02935369438,0.07766257538,,7,,,,,,
+Joey,16,4,Thomsen,2013,Mussel,bivalve,380,4000,3620,0.82,organic mass (mg),High,full food,3,0.708953817,0.1027379251,0.271819,,7,0.5855796418,0.09906872756,0.2621112158,,7,,,,,,
+Norah,17,5,Crook,2013,coral,coral,410,770,360,0.24,volume (mm3),Low,low maintenance,1,8.62069,1.293103,7.540021388,,34,7.758621,0.862069,5.314150215,,38,Crook data with N= individuals not jars,,,,,
+Norah,18,5,Crook,2013,coral,coral,410,770,360,0.24,volume (mm3),High,plentiful,3,81.03448,9.051724,43.4105433,,23,78.87931,7.758621,37.20903917,,23,Crook data with N= individuals not jars,,,,,
+Norah,19,5,Crook,2013,coral,coral,410,1220,810,0.43,volume (mm3),Low,low maintenance,1,8.62069,1.293103,7.540021388,,34,8.189655,1.293103,6.963572768,,29,Crook data with N= individuals not jars,,,,,
+Norah,20,5,Crook,2013,coral,coral,410,1220,810,0.43,volume (mm3),High,plentiful,3,81.03448,9.051724,43.4105433,,23,84.91379,5.603448,26.28250081,,22,Crook data with N= individuals not jars,,,,,
+Norah,21,6,Edmunds,2011,coral,coral,412.5,784.6,372.1,0.26,biomass (mg/cm2),Low,starvation,0,3.913043,0.56917,1.799873576,,10,5.146245,0.142292,0.4499668128,,10,Edmunds data with N= individuals not tanks,,,,,Used high temp as control as in paper
+Norah,22,6,Edmunds,2011,coral,coral,412.5,784.6,372.1,0.26,biomass (mg/cm2),High,ad libitum,4,6.047431,0.687747,2.174846974,,10,5.667984,1.328063,4.199703956,,10,Edmunds data with N= individuals not tanks,,,,,
+Norah,23,7,Comeau,2013,coral,coral,377,708.5,331.5,0.25,biomass (mg/cm2),Low,starvation,0,3.992958,0.492958,1.207495565,,6,4.190141,0.788732,1.931990944,,6,"They did have starvation, low, and high but Ramajo only used starvation and high food .... used high light ",,,,,
+Norah,24,7,Comeau,2013,coral,coral,377,708.5,331.5,0.25,biomass (mg/cm2),Med,natural,2,6.408451,0.739437,1.811243347,,6,7.739437,0.443662,1.086745518,,6,"They did have starvation, low, and high but Ramajo only used starvation and high food .... used high light ",,,,,
+Norah,25,7,Comeau,2013,coral,coral,377,708.5,331.5,0.25,biomass (mg/cm2),High,ad libitum,4,8.774648,0.985915,2.41498868,,6,9.56338,2.267606,5.554477638,,6,"They did have starvation, low, and high but Ramajo only used starvation and high food .... used high light ",,,,,
+Kat,28,8,Pansch,2014,Barnacle,crustacean,453.6,949.7,496.1,0.35,dry weight - Kiel (mg),Low,one fifth,1,0.062614652,0.004302886735,0.01217040156,0.008433658,8,0.066261737,0.005840558163,0.01651959313,0.011447494,8,N vs n not clear? first of two populations,,,,,NB: should we use the metric dry weight here instead of size?? 
+Kat,29,8,Pansch,2014,Barnacle,crustacean,499,981.5,482.5,0.37,dry weight - Kiel (mg),High,full,3,0.233831708,0.03688281378,0.1043203509,0.072290315,8,0.253144931,0.01075721735,0.03042600533,0.021084146,8,N vs n not clear? first of two populations,,,,,NB: should we use the metric dry weight here instead of size?? 
+Kat,26,8,Pansch,2014,Barnacle,crustacean,453.6,2690.4,2236.8,0.87,dry weight - Kiel (mg),Low,one fifth,1,0.062614652,0.004302886735,0.01217040156,0.008433658,8,0.063886596,0.006761679592,0.01912491797,0.013252892,8,N vs n not clear? first of two populations,,,,,NB: should we use the metric dry weight here instead of size?? 
+Kat,27,8,Pansch,2014,Barnacle,crustacean,499,2750,2251,0.91,dry weight - Kiel (mg),High,full,3,0.233831708,0.03688281378,0.1043203509,0.072290315,8,0.239926514,0.01659684949,0.04694297928,0.032529825,8,N vs n not clear? first of two populations,,,,,NB: should we use the metric dry weight here instead of size?? 
+Kat,32,8,Pansch,2014,Barnacle,crustacean,526.4,1141.7,615.3,0.33,dry weight - Tjarno (mg),Low,one fifth,1,0.016342,0.003182142857,0.007794626289,0.006237,6,0.019937,0.004153061224,0.01017288087,0.00814,6,N vs n not clear? 2nd of two populations,,,,,NB: should we use the metric dry weight here instead of size?? 
+Kat,33,8,Pansch,2014,Barnacle,crustacean,596.8,1104.1,507.3,0.28,dry weight - Tjarno (mg),High,full,3,0.048478,0.006633673469,0.01624911512,0.013002,6,0.051015,0.003883163265,0.009511768588,0.007611,6,N vs n not clear? 2nd of two populations,,,,,NB: should we use the metric dry weight here instead of size?? 
+Kat,30,8,Pansch,2014,Barnacle,crustacean,526.4,3255.9,2729.5,0.8,dry weight - Tjarno (mg),Low,one fifth,1,0.016342,0.003182142857,0.007794626289,0.006237,6,0.013277,0.003775510204,0.009248073519,0.0074,6,N vs n not clear? 2nd of two populations,,,,,NB: should we use the metric dry weight here instead of size?? 
+Kat,31,8,Pansch,2014,Barnacle,crustacean,596.8,3164.6,2567.8,0.76,dry weight - Tjarno (mg),High,full,3,0.048478,0.006633673469,0.01624911512,0.013002,6,0.044249,0.003613265306,0.008850656305,0.007082,6,N vs n not clear? 2nd of two populations,,,,,NB: should we use the metric dry weight here instead of size?? 
+Kat,34,9,Ramajo,2016,Scallop,bivalve,405,1304,899,0.45,growth (mm d-1),Low,one/50,1,0.016656,0.00408,0.007066767295,,3,0.009295,0.002306,0.003994109162,,3,,,,,,
+Kat,35,9,Ramajo,2016,Scallop,bivalve,459,1426,967,0.45,growth (mm d-1),Med,two fifths,2,0.023628,0.002483,0.004300682155,,3,0.020081,0.002218,0.003841688691,,3,,,,,,
+Kat,36,9,Ramajo,2016,Scallop,bivalve,552,1519,967,0.45,growth (mm d-1),High,full,3,0.03335,0.003459,0.005991163743,,3,0.016055,0.003282,0.00568459075,,3,,,,,,
+Kat,37,10,Towle,2015,Coral,coral,380,789,409,0.26,growth (mg cm-2 d-1),Low,starvation,0,1.380822,0.086301,0.2729077244,,10,1.006849,0.09589,0.3032308048,,10,,,,,,
+Kat,38,10,Towle,2015,Coral,coral,380,789,409,0.26,growth (mg cm-2 d-1),High,ad libitum,4,1.300913,0.099087,0.3133406065,,10,1.32968,0.089498,0.283017526,,10,,,,,,
+Norah,39,11,Drenkard,2013,Coral,coral,398,1278,880,0.4,tissue lipid weight per spat (ug/mm2),Low,starvation,0,10.34483,0.344828,0.5972596159,,3,11.81034,2.5,4.330127019,,3,,,,,,
+Norah,40,11,Drenkard,2013,Coral,coral,443,1344,901,0.4,tissue lipid weight per spat (ug/mm2),High,fed,3,13.27586,1.034483,1.791777116,,3,12.67241,2.068966,3.583554231,,3,,,,,,
+Norah,41,12,Melzner,2011,Mussel,bivalve,542.8,1125.1,582.3,0.31,somatic mass growth (mg dry mass),Low,low no filter,1,5,3.05,6.1,,4,7,4.7,9.4,,4,,,,,,
+Norah,42,12,Melzner,2011,Mussel,bivalve,523.1,1174.4,651.3,0.32,somatic mass growth (mg dry mass),High,natural,2,34.7,13.6,27.2,,4,40.7,15.25,30.5,,4,,,,,,
+Norah,43,12,Melzner,2011,Mussel,bivalve,542.8,2309.4,1766.6,0.61,somatic mass growth (mg dry mass),Low,low no filter,1,5,3.05,6.1,,4,17.4,8.05,16.1,,4,,,,,,
+Norah,44,12,Melzner,2011,Mussel,bivalve,523.1,2585.7,2062.6,0.62,somatic mass growth (mg dry mass),High,natural,2,34.7,13.6,27.2,,4,29.8,7.4,14.8,,4,,,,,,
+Norah,45,12,Melzner,2011,Mussel,bivalve,542.8,3957.6,3414.8,0.82,somatic mass growth (mg dry mass),Low,low no filter,1,5,3.05,6.1,,4,8.5,8.6,17.2,,4,,,,,,
+Norah,46,12,Melzner,2011,Mussel,bivalve,523.1,3908.2,3385.1,0.86,somatic mass growth (mg dry mass),High,natural,2,34.7,13.6,27.2,,4,36.5,6.05,12.1,,4,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,SE = (upper limit – lower limit) / 3.92.,,,,,,,,,,,,,,
