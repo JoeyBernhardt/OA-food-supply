@@ -1,5 +1,9 @@
 # Data wrangling
-
+# Joey Bernhardt 
+# Oct 1 2016 
+# Main goal: Rework the calcification 
+# data frame so that food supply is in columns to make it easier to analyze with
+# the metafor package
 
 # load packages -----------------------------------------------------------
 
