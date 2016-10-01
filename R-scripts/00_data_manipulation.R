@@ -1,4 +1,4 @@
-# Data wrangling
+# Going from wide to long and back!
 # Joey Bernhardt 
 # Oct 1 2016 
 # Main goal: Rework the calcification 
