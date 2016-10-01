@@ -2,7 +2,7 @@
 # Joey Bernhardt
 # Sept 10 2016
 
-
+## To do: first, just do comparison with most conservative treatment, or closest to delta ph of 0.5
 
 # load packages -----------------------------------------------------------
 
