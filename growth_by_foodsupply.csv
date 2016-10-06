@@ -1,0 +1,40 @@
+Author,CO2_level,low_food_mean,low_food_N,low_food_SD,low_food_SE,high_food_mean,high_food_N,high_food_SD,high_food_SE,low_food_95CI,high_food_95CI,Data_entry_person,Observation_ID,study,Paper_no,Year,Taxon,Taxon.big,CO2_control,DeltaCO2,DeltapH,Unit,Food.relative,Food.relative score,CO2_elevated
+Cole,Ambient,274.9513,3.0,1.1817,2.0468,292.6901,3.0,3.1512,5.4581,NA,NA,Norah,1,1,1,2016,oyster,bivalve,388.42,769.65,0.41,shell length (um),half food,1,1158.07
+Comeau,Ambient,3.992958,6.0,1.207495565,0.492958,8.774648,6.0,2.41498868,0.985915,NA,NA,Norah,23,15,7,2013,coral,coral,377.0,331.5,0.25,biomass (mg/cm2),starvation,0,708.5
+Comeau,Elevated,4.190141,6.0,1.931990944,0.788732,9.56338,6.0,5.554477638,2.267606,NA,NA,Norah,23,15,7,2013,coral,coral,377.0,331.5,0.25,biomass (mg/cm2),starvation,0,708.5
+Crook,Ambient,8.62069,34.0,7.540021388,1.293103,81.03448,23.0,43.4105433,9.051724,NA,NA,Norah,19,11,5,2013,coral,coral,410.0,810.0,0.43,volume (mm3),low maintenance,1,1220
+Crook,Elevated,8.189655,29.0,6.963572768,1.293103,84.91379,22.0,26.28250081,5.603448,NA,NA,Norah,19,11,5,2013,coral,coral,410.0,810.0,0.43,volume (mm3),low maintenance,1,1220
+Drenkard_1,Ambient,10.34483,3.0,0.597259616,0.344828,13.27586,3.0,1.791777116,1.034483,NA,NA,Norah,39,27,11,2013,Coral,coral,398.0,880.0,0.4,tissue lipid weight per spat (ug/mm2),starvation,0,1278
+Drenkard_1,Elevated,11.81034,3.0,4.330127019,2.5,12.67241,3.0,3.583554231,2.068966,NA,NA,Norah,39,27,11,2013,Coral,coral,398.0,880.0,0.4,tissue lipid weight per spat (ug/mm2),starvation,0,1278
+Drenkard_2,Ambient,1385.96,3.0,45.58757726,26.32,2132.0,3.0,103.97501,60.03,NA,NA,Norah,73,39,11,2013,Coral,coral,398.0,880.0,0.4,septa diameter (um),starvation,0,1278
+Drenkard_2,Elevated,1322.0,3.0,73.42163373,42.39,2062.0,3.0,76.53932519,44.19,NA,NA,Norah,73,39,11,2013,Coral,coral,398.0,880.0,0.4,septa diameter (um),starvation,0,1278
+Edmunds,Ambient,3.913043,10.0,1.799873576,0.56917,6.047431,10.0,2.174846974,0.687747,NA,NA,Norah,21,13,6,2011,coral,coral,412.5,372.1,0.26,biomass (mg/cm2),starvation,0,784.6
+Edmunds,Elevated,5.146245,10.0,0.449966813,0.142292,5.667984,10.0,4.199703956,1.328063,NA,NA,Norah,21,13,6,2011,coral,coral,412.5,372.1,0.26,biomass (mg/cm2),starvation,0,784.6
+Hettinger_1,Ambient,3.12294935,5.0,0.19,0.084724,4.210178034,5.0,0.19,0.08467,NA,NA,Joey,5,5,3,2013,oyster,bivalve,494.0,571.0,0.3,total dry weight (ug/larva),natural,3,1065
+Hettinger_1,Elevated,2.921063328,5.0,0.649279461,0.290366602,3.8993252,5.0,0.135282113,0.0605,NA,NA,Joey,5,5,3,2013,oyster,bivalve,494.0,571.0,0.3,total dry weight (ug/larva),natural,3,1065
+Hettinger_2,Ambient,0.030982,5.0,0.010983566,0.004912,0.034772,5.0,0.002039294,9.12e-4,NA,NA,Kat,57,31,3,2013,oyster,bivalve,494.0,571.0,0.3,shell growth (mm),natural,3,1065
+Hettinger_2,Elevated,0.026702,5.0,0.004706923,0.002105,0.031684,5.0,0.004550398,0.002035,NA,NA,Kat,57,31,3,2013,oyster,bivalve,494.0,571.0,0.3,shell growth (mm),natural,3,1065
+Melzner_1,Ambient,5.0,4.0,6.1,3.05,34.7,4.0,27.2,13.6,NA,NA,Norah,43,29,12,2011,Mussel,bivalve,542.8,1766.6,0.61,somatic mass growth (mg dry mass),low no filter,1,2309.4
+Melzner_1,Elevated,17.4,4.0,16.1,8.05,29.8,4.0,14.8,7.4,NA,NA,Norah,43,29,12,2011,Mussel,bivalve,542.8,1766.6,0.61,somatic mass growth (mg dry mass),low no filter,1,2309.4
+Melzner_2,Ambient,1.2,4.0,0.3,0.15,2.6,4.0,1.2,0.6,NA,NA,Norah,53,29,12,2011,Mussel,bivalve,542.8,1766.6,0.61,length growth,low no filter,1,2309.4
+Melzner_2,Elevated,1.1,4.0,0.3,0.15,2.5,4.0,0.4,0.2,NA,NA,Norah,53,29,12,2011,Mussel,bivalve,542.8,1766.6,0.61,length growth,low no filter,1,2309.4
+Pan,Ambient,240.41,50.0,81.91,11.58,336.98166,50.0,81.91,11.58,NA,NA,Joey,3,3,2,2015,urchin,echinoderm,431.9,368.7,0.2,body length (um),starvation,0,800.6
+Pan,Elevated,237.297,50.0,81.907714,11.58,339.27267,50.0,81.907714,11.58,NA,NA,Joey,3,3,2,2015,urchin,echinoderm,431.9,368.7,0.2,body length (um),starvation,0,800.6
+Pansch,Ambient,0.062614652,8.0,0.012170402,0.004302887,0.233831708,8.0,0.104320351,0.036882814,0.008433658,0.072290315,Kat,28,18,8,2014,Barnacle,crustacean,453.6,496.1,0.35,dry weight - Kiel (mg),one fifth,1,949.7
+Pansch,Elevated,0.066261737,8.0,0.016519593,0.005840558,0.253144931,8.0,0.030426005,0.010757217,0.011447494,0.021084146,Kat,28,18,8,2014,Barnacle,crustacean,453.6,496.1,0.35,dry weight - Kiel (mg),one fifth,1,949.7
+Pansch_1,Ambient,0.016342,6.0,0.007794626,0.003182143,0.048478,6.0,0.016249115,0.006633673,0.006237,0.013002,Kat,32,20,8,2014,Barnacle,crustacean,526.4,615.3,0.33,dry weight - Tjarno (mg),one fifth,1,1141.7
+Pansch_1,Elevated,0.019937,6.0,0.010172881,0.004153061,0.051015,6.0,0.009511769,0.003883163,0.00814,0.007611,Kat,32,20,8,2014,Barnacle,crustacean,526.4,615.3,0.33,dry weight - Tjarno (mg),one fifth,1,1141.7
+Pansch_2,Ambient,8.372093,8.0,0.604077933,0.213573802,12.85714286,8.0,1.294452715,0.457658146,0.418604651,0.897009967,Kat,59,33,8,2014,Barnacle,crustacean,453.6,496.1,0.35,size- Kiel (mm),one fifth,1,949.7
+Pansch_2,Elevated,8.491694,8.0,0.776671658,0.274594898,12.79734,8.0,0.86296899,0.305105612,0.538206,0.598007,Kat,59,33,8,2014,Barnacle,crustacean,453.6,496.1,0.35,size- Kiel (mm),one fifth,1,949.7
+Pansch_3,Ambient,2.976744186,6.0,0.564666427,0.230524104,3.641196013,6.0,0.365372394,0.149162655,0.451827243,0.29235880400000003,Kat,63,35,8,2014,Barnacle,crustacean,526.4,615.3,0.33,size- Tjarno(mm),one fifth,1,1141.7
+Pansch_3,Elevated,2.897009967,6.0,0.697529115,0.284765069,3.800664452,6.0,0.431803738,0.176283138,0.558139535,0.34551495,Kat,63,35,8,2014,Barnacle,crustacean,526.4,615.3,0.33,size- Tjarno(mm),one fifth,1,1141.7
+Ramajo,Ambient,0.009295,3.0,0.003994109,0.002306,0.016055,3.0,0.005684591,0.003282,NA,NA,Kat,34,22,9,2016,Scallop,bivalve,405.0,899.0,0.45,growth (mm d-1),one/50,1,1304
+Ramajo,Elevated,0.016656,3.0,0.007066767,0.00408,0.03335,3.0,0.005991164,0.003459,NA,NA,Kat,34,22,9,2016,Scallop,bivalve,405.0,899.0,0.45,growth (mm d-1),one/50,1,1304
+Taylor,Ambient,-7.73504,15.0,19.86145256,5.128205,4.230769,15.0,4.965362172,1.282051,NA,NA,Kat,47,31,13,2014,urchin,echinoderm,585.1,559.8,0.3,% Change width 140 days,Fed,3,1144.9
+Taylor,Elevated,-0.89744,15.0,1.655119433,0.42735,6.153846,15.0,9.103164627,2.350427,NA,NA,Kat,47,31,13,2014,urchin,echinoderm,585.1,559.8,0.3,% Change width 140 days,Fed,3,1144.9
+Thomsen_1,Ambient,0.062676,7.0,1e-4,3.78e-5,0.708953817,7.0,0.271819,0.102737925,NA,NA,Joey,11,8,4,2013,Mussel,bivalve,380.0,2020.0,0.61,organic mass (mg),one tenth,1,2400
+Thomsen_1,Elevated,0.090386428,7.0,1e-4,3.78e-5,0.639679548,7.0,0.349481621,0.132091637,NA,NA,Joey,11,8,4,2013,Mussel,bivalve,380.0,2020.0,0.61,organic mass (mg),one tenth,1,2400
+Thomsen_2,Ambient,1422.22,7.0,940.6968786,355.55,3875.0,7.0,1756.778871,664.0,NA,NA,Joey,69,37,4,2013,Mussel,bivalve,380.0,2020.0,0.61,shell length (um),one tenth,1,2400
+Thomsen_2,Elevated,1464.8,7.0,696.8908953,263.4,3471.4,7.0,1669.204502,630.9,NA,NA,Joey,69,37,4,2013,Mussel,bivalve,380.0,2020.0,0.61,shell length (um),one tenth,1,2400
+Towle,Ambient,1.380822,10.0,0.272907724,0.086301,1.300913,10.0,0.313340607,0.099087,NA,NA,Kat,37,25,10,2015,Coral,coral,380.0,409.0,0.26,growth (mg cm-2 d-1),starvation,0,789
+Towle,Elevated,1.006849,10.0,0.303230805,0.09589,1.32968,10.0,0.283017526,0.089498,NA,NA,Kat,37,25,10,2015,Coral,coral,380.0,409.0,0.26,growth (mg cm-2 d-1),starvation,0,789
