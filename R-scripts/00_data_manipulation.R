@@ -8,32 +8,34 @@
 # load packages -----------------------------------------------------------
 
 library(tidyverse)
+library(janitor)
 
 # read in data ------------------------------------------------------------
 
-calci <- read_csv("data-raw/calcification_delta_0.5.csv")
-growth <- read_csv("data-raw/growth.csv")
+calci <- read_csv("data-raw/calcification_multiple_CO2.csv") %>% 
+	remove_empty_cols() %>% 
+	clean_names() %>% 
+	rename(extra_notes = x32)
+growth <- read_csv("data-raw/growth_multiple_CO2.csv") %>% 
+	remove_empty_cols() %>% 
+	clean_names() %>%
+	rename(extra_notes = x33)
 
 
-# fix data entry errors ---------------------------------------------------
 
 
-calci$CO2_elevated[calci$CO2_elevated == "1094"] <- "1065" ## assuming this discrepancy in CO2 values is a typo, so I'm fixing it
-growth$CO2_elevated[growth$CO2_elevated == "1094"] <- "1065" ## assuming this discrepancy in CO2 values is a typo, so I'm fixing it
+# select out unnecessary columns---------------------------------------------------
 
 
-# select just the highest CO2 treatment in each study -----------------------------------
-
-calci_top <- calci %>%
-	select(1:9, 11:30, 10) %>%
-	group_by(Author, Food.supply) %>% 
-	# top_n(1)
+growth_unique <- growth %>% 
+	select(5:27) %>% 
+	unite(uniqueID, author, co_treatment_coarse, unit, remove = FALSE)
 
 
 # create a metadata table -------------------------------------------------
 
-calci_top_metadata <- calci_top %>% 
-select(1:15, 30)
+growth_metadata <- growth_unique %>% 
+select(1:14)
 
 # reshape the data.frame to plop food supply into cols --------------------
 
@@ -47,120 +49,151 @@ data_long <- calci_top %>%
 	rename(Highfood = High,
 				 Lowfood = Low)
 
+# now try with growth and mulitple CO2 levels -----------------------------
+
+
+growth_long <- growth_unique %>% 
+	gather(response_variable, value, 15:24) %>% 
+	select(response_variable, value, everything()) %>%
+	spread(food_supply, value) %>% 
+	select(High, Low, everything()) %>%
+	separate(response_variable, c("statistic", "CO2_level"), sep = "_") %>% 
+	rename(Highfood = High,
+				 Lowfood = Low) %>% 
+	group_by(statistic, CO2_level, uniqueID) %>% 
+	summarise(low_summary = mean(Lowfood, na.rm = TRUE),
+						high_summary = mean(Highfood, na.rm = TRUE))
+
+
+
+
 
 # get high food cols into wide format -------------------------------------
 
 
-Highfood <- data_long %>% 
-	select(Highfood, Author, CO2_level, statistic) %>% 
-	filter(!is.na(Highfood)) %>%  # get of NA's associated with the gather
-	spread(statistic, Highfood) %>%
-	rename(high_food_95CI = `95CI`,
-				 high_food_mean = Mean,
-				 high_food_N = N,
-				 high_food_SE = SE,
-				 high_food_SD = SD)
+Highfood <- growth_long %>% 
+	select(high_summary, uniqueID, CO2_level, statistic) %>% 
+	# filter(!is.na(Highfood)) %>%  # get of NA's associated with the gather
+	spread(statistic, high_summary) %>%
+	rename(high_food_95CI = x95ci,
+				 high_food_mean = mean,
+				 high_food_N = n,
+				 high_food_SE = se,
+				 high_food_SD = sd) %>%
+	separate(uniqueID, c("Author", "CO2_magnitude", "Unit"), sep = "_", remove = FALSE)
 
 
 # get low food cols into wide format --------------------------------------
 
-Lowfood <- data_long %>% 
-	select(Lowfood, Author, CO2_level, statistic) %>% 
-	filter(!is.na(Lowfood)) %>% # get of NA's associated with the gather
-	spread(statistic, Lowfood) %>%
-	rename(low_food_95CI = `95CI`,
-				 low_food_mean = Mean,
-				 low_food_N = N,
-				 low_food_SE = SE,
-				 low_food_SD = SD)
+Lowfood <- growth_long %>% 
+	select(low_summary, uniqueID, CO2_level, statistic) %>% 
+	# filter(!is.na(Lowfood)) %>% # get of NA's associated with the gather
+	spread(statistic, low_summary) %>%
+	rename(low_food_95CI = x95ci,
+				 low_food_mean = mean,
+				 low_food_N = n,
+				 low_food_SE = se,
+				 low_food_SD = sd) %>%
+	separate(uniqueID, c("Author", "CO2_magnitude", "Unit"), sep = "_", remove = FALSE)
 
+glimpse(Lowfood)
+glimpse(Highfood)
 
 # join them all together! --------------------------------------------------
 
 
 all <- left_join(Lowfood, Highfood)
 
-all_2 <- left_join(all, calci_top_metadata) %>%
-	distinct(low_food_mean, .keep_all = TRUE) %>% ## get rid of duplicated rows after join with metadata
-	select(-Food.supply) %>% 
-	select(1:2, 4:7, 9:12, 3, 8, everything())
+all_2 <- left_join(all, growth_metadata) %>% 
+	distinct(uniqueID, .keep_all = TRUE) %>% ## get rid of duplicated rows after join with metadata
+	select(-food_supply) %>%
+	select(1:2, 4:7, 9:12, 3, 8, everything()) %>% 
+	select(-unit)
 
 
 # write out as csv :) -----------------------------------------------------
 
 
-write_csv(all_2, "calcification_by_foodsupply.csv")
+write_csv(all_2, "data-processed/growth_by_foodsupply_allCO2_levels.csv")
+ 
+
+# now onto calcification --------------------------------------------------
+
+# select out unnecessary columns---------------------------------------------------
 
 
-# now onto the growth data ------------------------------------------------
+calci_unique <- calci %>% 
+	select(5:27) %>% 
+	unite(uniqueID, author, co_treatment_coarse, unit, remove = FALSE)
 
-# select just the highest CO2 treatment in each study -----------------------------------
 
-growth_top <- growth %>%
-	select(1:9, 11:30, 10) %>%
-	group_by(Author, Food.supply) %>% 
-	# top_n(1)
-	
-	
-	# create a metadata table -------------------------------------------------
+# create a metadata table -------------------------------------------------
 
-growth_top_metadata <- growth_top %>% 
-	select(1:15, 30)
+calci_metadata <- calci_unique %>% 
+	select(1:14)
 
 # reshape the data.frame to plop food supply into cols --------------------
 
-
-growth_data_long <- growth_top %>% 
-	gather(response_variable, value, 16:25) %>% 
+calci_long <- calci_unique %>% 
+	gather(response_variable, value, 15:24) %>% 
 	select(response_variable, value, everything()) %>%
-	spread(Food.supply, value) %>% 
+	spread(food_supply, value) %>% 
 	select(High, Low, everything()) %>%
 	separate(response_variable, c("statistic", "CO2_level"), sep = "_") %>% 
 	rename(Highfood = High,
-				 Lowfood = Low)
+				 Lowfood = Low) %>% 
+	group_by(statistic, CO2_level, uniqueID) %>% 
+	summarise(low_summary = mean(Lowfood, na.rm = TRUE),
+						high_summary = mean(Highfood, na.rm = TRUE))
+
+
+
 
 
 # get high food cols into wide format -------------------------------------
 
 
-growth_Highfood <- growth_data_long %>% 
-	select(Highfood, Author, CO2_level, statistic) %>% 
-	filter(!is.na(Highfood)) %>%  # get of NA's associated with the gather
-	spread(statistic, Highfood) %>%
-	rename(high_food_95CI = `95CI`,
-				 high_food_mean = Mean,
-				 high_food_N = N,
-				 high_food_SE = SE,
-				 high_food_SD = SD)
+Highfood_calc <- calci_long %>% 
+	select(high_summary, uniqueID, CO2_level, statistic) %>% 
+	# filter(!is.na(Highfood)) %>%  # get of NA's associated with the gather
+	spread(statistic, high_summary) %>%
+	rename(high_food_95CI = x95ci,
+				 high_food_mean = mean,
+				 high_food_N = n,
+				 high_food_SE = se,
+				 high_food_SD = sd) %>%
+	separate(uniqueID, c("Author", "CO2_magnitude", "Unit"), sep = "_", remove = FALSE)
 
 
 # get low food cols into wide format --------------------------------------
 
-growth_Lowfood <- growth_data_long %>% 
-	select(Lowfood, Author, CO2_level, statistic) %>% 
-	filter(!is.na(Lowfood)) %>% # get of NA's associated with the gather
-	spread(statistic, Lowfood) %>%
-	rename(low_food_95CI = `95CI`,
-				 low_food_mean = Mean,
-				 low_food_N = N,
-				 low_food_SE = SE,
-				 low_food_SD = SD)
+Lowfood_calc <- calci_long %>% 
+	select(low_summary, uniqueID, CO2_level, statistic) %>% 
+	# filter(!is.na(Lowfood)) %>% # get of NA's associated with the gather
+	spread(statistic, low_summary) %>%
+	rename(low_food_95CI = x95ci,
+				 low_food_mean = mean,
+				 low_food_N = n,
+				 low_food_SE = se,
+				 low_food_SD = sd) %>%
+	separate(uniqueID, c("Author", "CO2_magnitude", "Unit"), sep = "_", remove = FALSE)
+
 
 
 # join them all together! --------------------------------------------------
 
 
-growth_all <- left_join(growth_Lowfood, growth_Highfood)
+all_calc <- left_join(Lowfood_calc, Highfood_calc)
 
-growth_all_2 <- left_join(growth_all, growth_top_metadata) %>%
-	distinct(low_food_mean, .keep_all = TRUE) %>% ## get rid of duplicated rows after join with metadata
-	select(-Food.supply) %>% 
-	select(1:2, 4:7, 9:12, 3, 8, everything())
+all_2_calc <- left_join(all_calc, calci_metadata) %>% 
+	distinct(uniqueID, .keep_all = TRUE) %>% ## get rid of duplicated rows after join with metadata
+	select(-food_supply) %>%
+	select(1:2, 4:7, 9:12, 3, 8, everything()) %>% 
+	select(-unit)
 
 
 # write out as csv :) -----------------------------------------------------
 
 
-write_csv(growth_all_2, "growth_by_foodsupply.csv")
-
+write_csv(all_2_calc, "data-processed/calci_by_foodsupply_allCO2_levels.csv")
 
